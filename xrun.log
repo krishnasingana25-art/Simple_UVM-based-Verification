@@ -1,0 +1,192 @@
+xrun(64): 24.09-s007: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s007: Started on May 07, 2026 at 20:45:07 IST
+xrun
+	-uvm
+	design.sv
+	uvm.sv
+	+UVM_TESTNAME=alu_test
+	-coverage all
+	-covoverwrite
+Recompiling... reason: file './uvm.sv' is newer than expected.
+	expected: Thu May  7 20:35:59 2026
+	actual:   Thu May  7 20:47:40 2026
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /vlsi/cad/cadence/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d
+file: uvm.sv
+	module worklib.tb_top:sv
+		errors: 0, warnings: 0
+    uvm_config_db#(virtual alu_if)::get(this, "", "vif", vif);
+                                      |
+xmvlog: *W,FUNTSK (uvm.sv,77|38): function called as a task without void'().
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		$unit_0x5589ca1c
+		tb_top
+
+	Extracting FSMs for coverage:
+		worklib.alu
+		worklib.tb_top
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.alu:sv <0x6cc026c0>
+			streams:   1, words:  1628
+		worklib.tb_top:sv <0x716d9ae1>
+			streams: 609, words: 640801
+		worklib.cdns_uvm_pkg:sv <0x0da41707>
+			streams: 179, words: 276323
+		worklib.cdns_uvmapi:svp <0x2224ad9c>
+			streams:  27, words: 29503
+		worklib.cdns_assert2uvm_pkg:sv <0x5c89a7be>
+			streams:   3, words:  1654
+		worklib.uvm_pkg:sv <0x23f82bce>
+			streams: 5098, words: 7670319
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                        Instances  Unique
+		Modules:                        2       2
+		Interfaces:                     1       1
+		Verilog packages:               4       4
+		Registers:                 13,846  10,163
+		Scalar wires:                   1       -
+		Named events:                   4      12
+		Always blocks:                  1       1
+		Initial blocks:               283     155
+		Parallel blocks:               26      27
+		Pseudo assignments:             1       -
+		Assertions:                     3       3
+		Covergroup Instances:           0       1
+		Compilation units:              1       1
+		SV Class declarations:        199     312
+		SV Class specializations:     382     382
+	Writing initial simulation snapshot: worklib.tb_top:sv
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /vlsi/cad/cadence/XCELIUM2409/tools/xcelium/files/xmsimrc
+xcelium> source /vlsi/cad/cadence/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (24.09-s007)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test alu_test...
+UVM_INFO uvm.sv(162) @ 6: uvm_test_top.env.scb [PASS] OP:1 A:11 B:2 | RES:9
+UVM_INFO uvm.sv(162) @ 16: uvm_test_top.env.scb [PASS] OP:1 A:8 B:14 | RES:26
+UVM_INFO uvm.sv(162) @ 26: uvm_test_top.env.scb [PASS] OP:2 A:3 B:15 | RES:3
+UVM_INFO uvm.sv(162) @ 36: uvm_test_top.env.scb [PASS] OP:3 A:11 B:12 | RES:15
+UVM_INFO uvm.sv(162) @ 46: uvm_test_top.env.scb [PASS] OP:0 A:0 B:6 | RES:6
+UVM_INFO uvm.sv(162) @ 56: uvm_test_top.env.scb [PASS] OP:3 A:2 B:10 | RES:10
+UVM_INFO uvm.sv(162) @ 66: uvm_test_top.env.scb [PASS] OP:1 A:2 B:4 | RES:30
+UVM_INFO uvm.sv(162) @ 76: uvm_test_top.env.scb [PASS] OP:0 A:15 B:8 | RES:23
+UVM_INFO uvm.sv(162) @ 86: uvm_test_top.env.scb [PASS] OP:2 A:10 B:7 | RES:2
+UVM_INFO uvm.sv(162) @ 96: uvm_test_top.env.scb [PASS] OP:3 A:1 B:1 | RES:1
+UVM_INFO uvm.sv(162) @ 106: uvm_test_top.env.scb [PASS] OP:3 A:6 B:3 | RES:7
+UVM_INFO uvm.sv(162) @ 116: uvm_test_top.env.scb [PASS] OP:2 A:9 B:14 | RES:8
+UVM_INFO uvm.sv(162) @ 126: uvm_test_top.env.scb [PASS] OP:0 A:8 B:6 | RES:14
+UVM_INFO uvm.sv(162) @ 136: uvm_test_top.env.scb [PASS] OP:1 A:5 B:8 | RES:29
+UVM_INFO uvm.sv(162) @ 146: uvm_test_top.env.scb [PASS] OP:2 A:15 B:3 | RES:3
+UVM_INFO uvm.sv(162) @ 156: uvm_test_top.env.scb [PASS] OP:3 A:7 B:6 | RES:7
+UVM_INFO uvm.sv(162) @ 166: uvm_test_top.env.scb [PASS] OP:0 A:11 B:4 | RES:15
+UVM_INFO uvm.sv(162) @ 176: uvm_test_top.env.scb [PASS] OP:1 A:14 B:10 | RES:4
+UVM_INFO uvm.sv(162) @ 186: uvm_test_top.env.scb [PASS] OP:1 A:13 B:13 | RES:0
+UVM_INFO uvm.sv(162) @ 196: uvm_test_top.env.scb [PASS] OP:3 A:10 B:9 | RES:11
+UVM_INFO uvm.sv(162) @ 206: uvm_test_top.env.scb [PASS] OP:3 A:4 B:15 | RES:15
+UVM_INFO uvm.sv(162) @ 216: uvm_test_top.env.scb [PASS] OP:0 A:11 B:15 | RES:26
+UVM_INFO uvm.sv(162) @ 226: uvm_test_top.env.scb [PASS] OP:2 A:15 B:11 | RES:11
+UVM_INFO uvm.sv(162) @ 236: uvm_test_top.env.scb [PASS] OP:3 A:1 B:14 | RES:15
+UVM_INFO uvm.sv(162) @ 246: uvm_test_top.env.scb [PASS] OP:3 A:1 B:8 | RES:9
+UVM_INFO uvm.sv(162) @ 256: uvm_test_top.env.scb [PASS] OP:2 A:13 B:15 | RES:13
+UVM_INFO uvm.sv(162) @ 266: uvm_test_top.env.scb [PASS] OP:0 A:7 B:15 | RES:22
+UVM_INFO uvm.sv(162) @ 276: uvm_test_top.env.scb [PASS] OP:2 A:14 B:13 | RES:12
+UVM_INFO uvm.sv(162) @ 286: uvm_test_top.env.scb [PASS] OP:3 A:2 B:0 | RES:2
+UVM_INFO uvm.sv(162) @ 296: uvm_test_top.env.scb [PASS] OP:2 A:4 B:14 | RES:4
+UVM_INFO uvm.sv(162) @ 306: uvm_test_top.env.scb [PASS] OP:1 A:3 B:9 | RES:26
+UVM_INFO uvm.sv(162) @ 316: uvm_test_top.env.scb [PASS] OP:3 A:15 B:10 | RES:15
+UVM_INFO uvm.sv(162) @ 326: uvm_test_top.env.scb [PASS] OP:1 A:9 B:8 | RES:1
+UVM_INFO uvm.sv(162) @ 336: uvm_test_top.env.scb [PASS] OP:3 A:0 B:13 | RES:13
+UVM_INFO uvm.sv(162) @ 346: uvm_test_top.env.scb [PASS] OP:0 A:4 B:14 | RES:18
+UVM_INFO uvm.sv(162) @ 356: uvm_test_top.env.scb [PASS] OP:3 A:5 B:9 | RES:13
+UVM_INFO uvm.sv(162) @ 366: uvm_test_top.env.scb [PASS] OP:1 A:4 B:11 | RES:25
+UVM_INFO uvm.sv(162) @ 376: uvm_test_top.env.scb [PASS] OP:0 A:0 B:10 | RES:10
+UVM_INFO uvm.sv(162) @ 386: uvm_test_top.env.scb [PASS] OP:0 A:9 B:2 | RES:11
+UVM_INFO uvm.sv(162) @ 396: uvm_test_top.env.scb [PASS] OP:3 A:0 B:1 | RES:1
+UVM_INFO uvm.sv(162) @ 406: uvm_test_top.env.scb [PASS] OP:3 A:4 B:13 | RES:13
+UVM_INFO uvm.sv(162) @ 416: uvm_test_top.env.scb [PASS] OP:0 A:5 B:3 | RES:8
+UVM_INFO uvm.sv(162) @ 426: uvm_test_top.env.scb [PASS] OP:3 A:4 B:3 | RES:7
+UVM_INFO uvm.sv(162) @ 436: uvm_test_top.env.scb [PASS] OP:0 A:0 B:12 | RES:12
+UVM_INFO uvm.sv(162) @ 446: uvm_test_top.env.scb [PASS] OP:2 A:9 B:15 | RES:9
+UVM_INFO uvm.sv(162) @ 456: uvm_test_top.env.scb [PASS] OP:1 A:15 B:11 | RES:4
+UVM_INFO uvm.sv(162) @ 466: uvm_test_top.env.scb [PASS] OP:3 A:3 B:2 | RES:3
+UVM_INFO uvm.sv(162) @ 476: uvm_test_top.env.scb [PASS] OP:1 A:4 B:5 | RES:31
+UVM_INFO uvm.sv(162) @ 486: uvm_test_top.env.scb [PASS] OP:3 A:3 B:12 | RES:15
+UVM_INFO /vlsi/cad/cadence/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 495: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO uvm.sv(138) @ 495: uvm_test_top.env.cov [COV_RESULTS] ==============================================
+UVM_INFO uvm.sv(139) @ 495: uvm_test_top.env.cov [COV_RESULTS]   TOTAL COVERAGE: 95.83%
+UVM_INFO uvm.sv(140) @ 495: uvm_test_top.env.cov [COV_RESULTS]   OP Coverpoint:  100.00%
+UVM_INFO uvm.sv(141) @ 495: uvm_test_top.env.cov [COV_RESULTS] ==============================================
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   55
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV_RESULTS]     4
+[PASS]    49
+[RNTST]     1
+[TEST_DONE]     1
+Simulation complete via $finish(1) at time 495 NS + 50
+/vlsi/cad/cadence/XCELIUM2409/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.alu_cg" will be generated for covergroup instance "alu_cg" as the name of the covergroup instance is not specified explicitly: ./uvm.sv, 100.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_top(tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_371e721f_3ebc798f.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_371e721f_3ebc798f.ucd
+TOOL:	xrun(64)	24.09-s007: Exiting on May 07, 2026 at 20:45:16 IST  (total: 00:00:09)
