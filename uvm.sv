@@ -1,7 +1,7 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-// --- 1. SEQUENCE ITEM (Constrained Random Stimulus) ---
+// --- 1. SEQUENCE ITEM 
 class alu_item extends uvm_sequence_item;
   rand bit [3:0] a;
   rand bit [3:0] b;
@@ -92,7 +92,7 @@ class alu_monitor extends uvm_monitor;
   endtask
 endclass
 
-// --- 5. COVERAGE COLLECTOR (Your Main Focus) ---
+// --- 5. COVERAGE COLLECTOR 
 class alu_coverage extends uvm_subscriber #(alu_item);
   `uvm_component_utils(alu_coverage)
   alu_item item;
